@@ -66,7 +66,7 @@ export default function Home() {
               <h3 className={`${styles.contactLabel} ${dir === 'rtl' ? styles.contactLabelArabic : styles.contactLabelEnglish}`}>
                 {t.email}
               </h3>
-              <a href={`mailto:${t.emailValue}`} className={`${styles.contactValue} ${styles.englishText}`}>
+              <a href={`mailto:${t.emailValue}`} className={`${styles.contactValue} ${styles.emailValue} ${styles.englishText}`}>
                 {t.emailValue}
               </a>
             </div>

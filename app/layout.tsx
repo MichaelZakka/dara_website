@@ -19,8 +19,20 @@ export const metadata: Metadata = {
   title: "DARA LLC - We Draw Your Dreams",
   description: "DARA LLC - Design and Architectural Services | نحن نرسم أحلامك",
   icons: {
-    icon: '/logo_transparent.png',
-    apple: '/logo_transparent.png',
+    icon: [
+      { url: '/logo_transparent.png', type: 'image/png' },
+      { url: '/logo_transparent.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo_transparent.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/logo_transparent.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/logo_transparent.png',
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
   },
 };
 

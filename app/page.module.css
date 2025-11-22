@@ -10,6 +10,7 @@
 .main {
   max-width: 64rem;
   width: 100%;
+  padding: 0;
 }
 
 /* Logo Section */
@@ -124,14 +125,14 @@
   background-color: #FFFFFF;
   border-radius: 1rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  padding: 3rem;
+  padding: 1.5rem;
 }
 
 .contactTitle {
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #3B4A8C;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
@@ -144,14 +145,17 @@
 }
 
 .contactGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
 }
 
 /* Contact Item */
 .contactItem {
   text-align: center;
+  width: 100%;
+  padding: 0;
 }
 
 .phoneList,
@@ -210,6 +214,11 @@
   unicode-bidi: embed;
 }
 
+.emailValue {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
 /* Force English font for Latin text */
 .englishText {
   font-family: var(--font-montserrat), sans-serif !important;
@@ -264,6 +273,8 @@
   transition: color 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .contactValueArabic {
@@ -281,6 +292,9 @@
 .contactText {
   color: #5A6B8C;
   font-weight: 500;
+  word-wrap: break-word;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .contactTextArabic {
@@ -311,6 +325,181 @@
 }
 
 /* Responsive Design */
+
+/* Mobile Small (up to 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .logo {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .brandSection {
+    margin-bottom: 2rem;
+  }
+
+  .brandName {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .statusBadge {
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .statusText {
+    font-size: 0.75rem;
+  }
+
+  .messageSection {
+    margin-bottom: 2rem;
+  }
+
+  .message {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .contactCard {
+    padding: 1.5rem 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .contactTitle {
+    font-size: 1.375rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contactGrid {
+    gap: 2.5rem;
+  }
+
+  .contactItem {
+    padding: 0;
+  }
+
+  .iconContainer {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .contactLabel {
+    font-size: 0.8125rem;
+  }
+
+  .contactValue,
+  .contactText {
+    font-size: 0.875rem;
+    padding: 0 0.5rem;
+  }
+
+  .contactValue {
+    word-break: break-all;
+  }
+
+  .mapButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer {
+    margin-top: 2rem;
+  }
+
+  .footerText {
+    font-size: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .phoneList,
+  .locationList {
+    gap: 0.75rem;
+  }
+
+  .locationItem {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .phoneList a,
+  .locationList p {
+    max-width: 100%;
+  }
+
+  .emailValue {
+    font-size: 0.8125rem;
+    word-break: break-all;
+  }
+}
+
+/* Mobile Medium (481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .logo {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .brandName {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.0625rem;
+  }
+
+  .message {
+    font-size: 1.0625rem;
+  }
+
+  .contactCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .contactTitle {
+    font-size: 1.625rem;
+  }
+
+  .contactGrid {
+    gap: 2.5rem;
+  }
+
+  .contactItem {
+    padding: 0;
+  }
+
+  .mapButton {
+    width: auto;
+    min-width: 200px;
+  }
+
+  .contactValue,
+  .contactText {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Tablet (768px and up) */
 @media (min-width: 768px) {
   .logo {
     width: 10rem;
@@ -334,13 +523,28 @@
   }
 
   .contactGrid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .mapButton {
+    width: auto;
   }
 }
 
-@media (max-width: 767px) {
-  .contactCard {
-    padding: 2rem;
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .mapButton {
+    padding: 0.75rem 1.25rem;
+    min-height: 44px; /* iOS recommended touch target */
+  }
+
+  .contactValue,
+  .statusBadge {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
 }
 

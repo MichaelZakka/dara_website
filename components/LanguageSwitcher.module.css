@@ -52,3 +52,43 @@
   left: 1.5rem;
 }
 
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .container {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  [dir="rtl"] .container {
+    left: 1rem;
+    right: auto;
+  }
+
+  .switcher {
+    padding: 0.2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .button {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8125rem;
+    min-height: 36px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+
+  [dir="rtl"] .container {
+    left: 1.25rem;
+    right: auto;
+  }
+
+  .button {
+    padding: 0.45rem 0.875rem;
+  }
+}
+
