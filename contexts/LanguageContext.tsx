@@ -40,7 +40,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   }, [language, mounted]);
 
-  const value = {
+  const value: LanguageContextType = {
     language,
     setLanguage,
     t: translations[language],

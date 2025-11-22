@@ -18,6 +18,10 @@ const cairo = Cairo({
 export const metadata: Metadata = {
   title: "DARA LLC - We Draw Your Dreams",
   description: "DARA LLC - Design and Architectural Services | نحن نرسم أحلامك",
+  icons: {
+    icon: '/logo_transparent.png',
+    apple: '/logo_transparent.png',
+  },
 };
 
 export default function RootLayout({
