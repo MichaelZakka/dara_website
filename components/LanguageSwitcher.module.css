@@ -1,0 +1,54 @@
+.container {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+}
+
+.switcher {
+  background-color: #FFFFFF;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 0.25rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonArabic {
+  font-family: var(--font-cairo), sans-serif;
+}
+
+.buttonEnglish {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.button.active {
+  background-color: #3B4A8C;
+  color: #FFFFFF;
+}
+
+.button.inactive {
+  background-color: transparent;
+  color: #5A6B8C;
+}
+
+.button.inactive:hover {
+  background-color: #F8F9FB;
+}
+
+/* RTL Support */
+[dir="rtl"] .container {
+  right: auto;
+  left: 1.5rem;
+}
+
